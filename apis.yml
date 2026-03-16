@@ -1,35 +1,46 @@
 aid: icims
 name: iCIMS
 description: >-
-  The Workflows Endpoint allows vendors to interact with various workflows,
-  which connect a Job baseProfile and a Person associatedProfile, in the iCIMS
-  ...
+  iCIMS is a leading talent cloud company providing applicant tracking and
+  talent acquisition software. The iCIMS developer platform provides APIs for
+  integrating with iCIMS Talent Cloud, enabling access to job postings,
+  applicant workflows, candidate management, and hiring processes.
 type: Index
-position: Consumer
-access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - API
+  - Talent Acquisition
+  - Applicant Tracking
+  - HR
+  - Recruiting
 created: '2025-01-08'
-modified: '2025-01-08'
+modified: '2026-03-16'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: icims:icims
-    name: iCIMS
+  - aid: icims:icims-workflows-api
+    name: iCIMS Workflows API
     description: >-
-      The Workflows Endpoint allows vendors to interact with various workflows,
-      which connect a Job baseProfile and a Person associatedProfile, in the
-      iCIMS ...
-    humanURL: >-
-      https://developer-community.icims.com/applications/applicant-tracking/workflows-api
+      The iCIMS Workflows API allows vendors to interact with various workflows,
+      which connect a Job baseProfile and a Person associatedProfile, enabling
+      management of the candidate workflow through the recruitment process.
+    humanURL: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
     tags:
-      - API
+      - Workflows
+      - Applicant Tracking
+      - Jobs
     properties:
       - type: Documentation
-        url: >-
-          https://developer-community.icims.com/applications/applicant-tracking/workflows-api
+        url: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
+common:
+  - type: Portal
+    url: https://developer-community.icims.com/
+  - type: Website
+    url: https://www.icims.com/
+  - type: Documentation
+    url: https://developer-community.icims.com/
+  - type: Support
+    url: https://www.icims.com/support/
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
