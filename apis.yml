@@ -8,10 +8,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Talent Acquisition
   - Applicant Tracking
   - HR
   - Recruiting
+  - Talent Acquisition
 created: '2025-01-08'
 modified: '2026-03-16'
 url: >-
@@ -26,9 +26,9 @@ apis:
       management of the candidate workflow through the recruitment process.
     humanURL: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
     tags:
-      - Workflows
       - Applicant Tracking
       - Jobs
+      - Workflows
     properties:
       - type: Documentation
         url: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
