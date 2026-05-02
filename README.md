@@ -5,18 +5,18 @@ iCIMS is a leading talent cloud company providing applicant tracking and talent 
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
 
 ## Tags:
 
- - Talent Acquisition, Applicant Tracking, HR, Recruiting
+ - Applicant Tracking, HR, Recruiting, Talent Acquisition
 
 ## Timestamps
 
-- **Created:** 2025-01-08 
-- **Modified:** 2026-03-16 
+- **Created:** 2025-01-08
+- **Modified:** 2026-04-28
 
 ## APIs
 
@@ -25,14 +25,39 @@ The iCIMS Workflows API allows vendors to interact with various workflows, which
 
 **Human URL:** [https://developer-community.icims.com/applications/applicant-tracking/workflows-api](https://developer-community.icims.com/applications/applicant-tracking/workflows-api)
 
-
 #### Tags:
 
- - Workflows, Applicant Tracking, Jobs
+ - Applicant Tracking, Jobs, Workflows
 
 #### Properties
 
 - [Documentation](https://developer-community.icims.com/applications/applicant-tracking/workflows-api)
+
+### iCIMS Apply Framework API
+The iCIMS Apply Framework API enables external systems to deliver candidate apply experiences and submit applications into the iCIMS Talent Cloud, supporting integrations with job boards, sourcing channels, and partner platforms.
+
+**Human URL:** [https://developer-community.icims.com/](https://developer-community.icims.com/)
+
+#### Tags:
+
+ - Applicant Tracking, Apply, Jobs
+
+#### Properties
+
+- [Documentation](https://developer-community.icims.com/)
+
+### iCIMS Marketplace Integrations API
+The iCIMS Marketplace Integrations API enables certified partners to build, publish, and manage integrations with the iCIMS Talent Cloud across recruiting, onboarding, assessment, and background screening categories.
+
+**Human URL:** [https://developer-community.icims.com/](https://developer-community.icims.com/)
+
+#### Tags:
+
+ - Applicant Tracking, Integrations, Marketplace
+
+#### Properties
+
+- [Documentation](https://developer-community.icims.com/)
 
 ## Common Properties
 
