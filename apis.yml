@@ -32,6 +32,8 @@ apis:
     properties:
       - type: Documentation
         url: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
+      - url: openapi/icims-openapi.yml
+        type: OpenAPI
   - aid: icims:icims-apply-framework-api
     name: iCIMS Apply Framework API
     description: >-

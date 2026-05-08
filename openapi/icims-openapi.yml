@@ -1,0 +1,169 @@
+openapi: 3.1.0
+info:
+  title: iCIMS Workflows API
+  description: >-
+    The iCIMS Workflows API allows vendors to interact with the various
+    workflows in iCIMS Talent Cloud, which connect a Job baseProfile and a
+    Person associatedProfile and enable management of the candidate workflow
+    through the recruitment process. Supported workflow types include
+    applicantworkflows, sourceworkflows, onboardworkflows, and
+    connecteventworkflows.
+  version: 1.0.0
+  contact:
+    name: iCIMS Developer Community
+    url: https://developer-community.icims.com/
+  license:
+    name: Proprietary
+    url: https://www.icims.com/legal/
+  x-generated-from: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://api.icims.com
+    description: iCIMS Talent Cloud API
+security:
+  - basicAuth: []
+tags:
+  - name: Workflows
+    description: Manage candidate workflows linking jobs and people.
+paths:
+  /customers/{customerId}/{workflowType}:
+    post:
+      tags: [Workflows]
+      operationId: createWorkflow
+      summary: Create a workflow
+      parameters:
+        - $ref: '#/components/parameters/CustomerId'
+        - $ref: '#/components/parameters/WorkflowType'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '201':
+          description: Workflow created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /customers/{customerId}/{workflowType}/{workflowId}:
+    get:
+      tags: [Workflows]
+      operationId: getWorkflow
+      summary: Get a workflow
+      parameters:
+        - $ref: '#/components/parameters/CustomerId'
+        - $ref: '#/components/parameters/WorkflowType'
+        - $ref: '#/components/parameters/WorkflowId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+    patch:
+      tags: [Workflows]
+      operationId: updateWorkflow
+      summary: Update a workflow
+      parameters:
+        - $ref: '#/components/parameters/CustomerId'
+        - $ref: '#/components/parameters/WorkflowType'
+        - $ref: '#/components/parameters/WorkflowId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+    delete:
+      tags: [Workflows]
+      operationId: deleteWorkflow
+      summary: Delete a workflow
+      parameters:
+        - $ref: '#/components/parameters/CustomerId'
+        - $ref: '#/components/parameters/WorkflowType'
+        - $ref: '#/components/parameters/WorkflowId'
+      responses:
+        '204':
+          description: Deleted
+  /customers/{customerId}/applicantworkflows/person/{personId}/job/{jobId}:
+    get:
+      tags: [Workflows]
+      operationId: getApplicantWorkflowByPersonAndJob
+      summary: Get applicant workflow for a person and job
+      parameters:
+        - $ref: '#/components/parameters/CustomerId'
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /customers/{customerId}/applicantworkflows/{workflowId}/submittalstatuslog:
+    get:
+      tags: [Workflows]
+      operationId: getApplicantWorkflowSubmittalStatusLog
+      summary: Get the submittal status log for an applicant workflow
+      parameters:
+        - $ref: '#/components/parameters/CustomerId'
+        - $ref: '#/components/parameters/WorkflowId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+  parameters:
+    CustomerId:
+      name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+    WorkflowType:
+      name: workflowType
+      in: path
+      required: true
+      schema:
+        type: string
+        enum:
+          - applicantworkflows
+          - sourceworkflows
+          - onboardworkflows
+          - connecteventworkflows
+    WorkflowId:
+      name: workflowId
+      in: path
+      required: true
+      schema:
+        type: string
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
