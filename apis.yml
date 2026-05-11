@@ -73,6 +73,33 @@ common:
     url: https://developer-community.icims.com/
   - type: Support
     url: https://www.icims.com/support/
+  - type: Integrations
+    url: https://www.icims.com/products/integrations/
+integrations:
+  - name: iCIMS
+  - name: Close menu
+  - name: Open menu
+  - name: ICIMS Hire
+  - name: ICIMS Engage
+  - name: ICIMS Employer Branding
+  - name: Retail
+  - name: Healthcare & hospitals
+  - name: Manufacturing
+  - name: Finance
+  - name: CHROs & HR leaders
+  - name: Talent acquisition leaders
+  - name: IT leaders
+  - name: HR operations leaders
+  - name: The Cheesecake Factory
+  - name: 'Editor''s Pick'
+  - name: Corporate newsroom
+  - name: About ICIMS
+  - name: ADP
+  - name: Infor
+  - name: Microsoft
+  - name: UKG
+  - name: Checklist
+  - name: Phone
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
