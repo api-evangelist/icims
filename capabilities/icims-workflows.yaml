@@ -1,0 +1,252 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: iCIMS Workflows API — Workflows
+  description: 'iCIMS Workflows API — Workflows. 6 operations. Lead operation: Get applicant workflow for a person and job.
+    Self-contained Naftiko capability covering one Icims business surface.'
+  tags:
+  - Icims
+  - Workflows
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ICIMS_API_KEY: ICIMS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: icims-workflows
+    baseUri: https://api.icims.com
+    description: iCIMS Workflows API — Workflows business capability. Self-contained, no shared references.
+    resources:
+    - name: customers-customerId-applicantworkflows-person-personId-job-jobId
+      path: /customers/{customerId}/applicantworkflows/person/{personId}/job/{jobId}
+      operations:
+      - name: getapplicantworkflowbypersonandjob
+        method: GET
+        description: Get applicant workflow for a person and job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: personId
+          in: path
+          type: string
+          required: true
+        - name: jobId
+          in: path
+          type: string
+          required: true
+    - name: customers-customerId-applicantworkflows-workflowId-submittalstatuslog
+      path: /customers/{customerId}/applicantworkflows/{workflowId}/submittalstatuslog
+      operations:
+      - name: getapplicantworkflowsubmittalstatuslog
+        method: GET
+        description: Get the submittal status log for an applicant workflow
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: customers-customerId-workflowType
+      path: /customers/{customerId}/{workflowType}
+      operations:
+      - name: createworkflow
+        method: POST
+        description: Create a workflow
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: customers-customerId-workflowType-workflowId
+      path: /customers/{customerId}/{workflowType}/{workflowId}
+      operations:
+      - name: getworkflow
+        method: GET
+        description: Get a workflow
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateworkflow
+        method: PATCH
+        description: Update a workflow
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteworkflow
+        method: DELETE
+        description: Delete a workflow
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: basic
+      username: '{{env.ICIMS_USER}}'
+      password: '{{env.ICIMS_PASS}}'
+  exposes:
+  - type: rest
+    namespace: icims-workflows-rest
+    port: 8080
+    description: REST adapter for iCIMS Workflows API — Workflows. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/customers/{customerid}/applicantworkflows/person/{personid}/job/{jobid}
+      name: customers-customerid-applicantworkflows-person-personid-job-jobid
+      description: REST surface for customers-customerId-applicantworkflows-person-personId-job-jobId.
+      operations:
+      - method: GET
+        name: getapplicantworkflowbypersonandjob
+        description: Get applicant workflow for a person and job
+        call: icims-workflows.getapplicantworkflowbypersonandjob
+        with:
+          personId: rest.personId
+          jobId: rest.jobId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/customers/{customerid}/applicantworkflows/{workflowid}/submittalstatuslog
+      name: customers-customerid-applicantworkflows-workflowid-submittalstatuslog
+      description: REST surface for customers-customerId-applicantworkflows-workflowId-submittalstatuslog.
+      operations:
+      - method: GET
+        name: getapplicantworkflowsubmittalstatuslog
+        description: Get the submittal status log for an applicant workflow
+        call: icims-workflows.getapplicantworkflowsubmittalstatuslog
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/customers/{customerid}/{workflowtype}
+      name: customers-customerid-workflowtype
+      description: REST surface for customers-customerId-workflowType.
+      operations:
+      - method: POST
+        name: createworkflow
+        description: Create a workflow
+        call: icims-workflows.createworkflow
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/customers/{customerid}/{workflowtype}/{workflowid}
+      name: customers-customerid-workflowtype-workflowid
+      description: REST surface for customers-customerId-workflowType-workflowId.
+      operations:
+      - method: GET
+        name: getworkflow
+        description: Get a workflow
+        call: icims-workflows.getworkflow
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateworkflow
+        description: Update a workflow
+        call: icims-workflows.updateworkflow
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteworkflow
+        description: Delete a workflow
+        call: icims-workflows.deleteworkflow
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: icims-workflows-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for iCIMS Workflows API — Workflows. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: get-applicant-workflow-person-and
+      description: Get applicant workflow for a person and job
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: icims-workflows.getapplicantworkflowbypersonandjob
+      with:
+        personId: tools.personId
+        jobId: tools.jobId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-submittal-status-log-applicant
+      description: Get the submittal status log for an applicant workflow
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: icims-workflows.getapplicantworkflowsubmittalstatuslog
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-workflow
+      description: Create a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: icims-workflows.createworkflow
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-workflow
+      description: Get a workflow
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: icims-workflows.getworkflow
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-workflow
+      description: Update a workflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: icims-workflows.updateworkflow
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-workflow
+      description: Delete a workflow
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: icims-workflows.deleteworkflow
+      outputParameters:
+      - type: object
+        mapping: $.
