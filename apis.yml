@@ -59,6 +59,12 @@ apis:
       - type: Documentation
         url: https://developer-community.icims.com/
 common:
+  - type: TrustCenter
+    url: security/icims-trust-center.yml
+  - type: DomainSecurity
+    url: security/icims-domain-security.yml
+  - type: Authentication
+    url: authentication/icims-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/iCIMS-inc
   - type: LinkedIn
@@ -73,6 +79,8 @@ common:
     url: https://www.icims.com/support/
   - type: Integrations
     url: https://www.icims.com/products/integrations/
+  - url: https://www.icims.com/feed
+    type: Blog
 integrations:
   - name: iCIMS
   - name: Close menu
