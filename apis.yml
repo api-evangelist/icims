@@ -59,6 +59,8 @@ apis:
       - type: Documentation
         url: https://developer-community.icims.com/
 common:
+  - type: AgenticAccess
+    url: agentic-access/icims-agentic-access.yml
   - type: TrustCenter
     url: security/icims-trust-center.yml
   - type: DomainSecurity
