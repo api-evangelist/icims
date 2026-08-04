@@ -1,0 +1,14 @@
+{
+  "provider": "icims",
+  "sources": [
+    "icims-workflows-api-openapi.yml"
+  ],
+  "outputs": [
+    "icims-workflows-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
