@@ -1,0 +1,191 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "iCIMS Workflows API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workflows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a workflow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.icims.com/customers/:customerId/:workflowType",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowType",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a workflow"
+        },
+        {
+          "info": {
+            "name": "Get a workflow",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.icims.com/customers/:customerId/:workflowType/:workflowId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a workflow"
+        },
+        {
+          "info": {
+            "name": "Update a workflow",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.icims.com/customers/:customerId/:workflowType/:workflowId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a workflow"
+        },
+        {
+          "info": {
+            "name": "Delete a workflow",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.icims.com/customers/:customerId/:workflowType/:workflowId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a workflow"
+        },
+        {
+          "info": {
+            "name": "Get applicant workflow for a person and job",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.icims.com/customers/:customerId/applicantworkflows/person/:personId/job/:jobId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "jobId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get applicant workflow for a person and job"
+        },
+        {
+          "info": {
+            "name": "Get the submittal status log for an applicant workflow",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.icims.com/customers/:customerId/applicantworkflows/:workflowId/submittalstatuslog",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workflowId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the submittal status log for an applicant workflow"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
