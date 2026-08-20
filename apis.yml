@@ -39,6 +39,10 @@ apis:
   tags:
   - Applicant Tracking
   - Apply
+  - Job
+  tags_raw:
+  - Applicant Tracking
+  - Apply
   - Jobs
   properties:
   - type: Documentation
@@ -50,6 +54,10 @@ apis:
     with the iCIMS Talent Cloud across recruiting, onboarding, assessment, and background screening categories.
   humanURL: https://developer-community.icims.com/
   tags:
+  - Applicant Tracking
+  - Integration
+  - Marketplace
+  tags_raw:
   - Applicant Tracking
   - Integrations
   - Marketplace
