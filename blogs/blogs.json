@@ -3,12 +3,9 @@
   "feeds": [
     {
       "source": "https://www.icims.com/feed",
-      "feed_url": "https://www.icims.com/feed",
-      "title": "",
-      "saved": 1,
-      "method": "feed"
+      "error": "URLError"
     }
   ],
-  "fetched": "2026-08-15T12:11:08Z",
-  "post_count": 19
+  "fetched": "2026-08-22T20:20:02Z",
+  "post_count": 21
 }
