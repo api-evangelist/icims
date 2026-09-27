@@ -135,17 +135,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Resource'
 components:
-  schemas:
-    Resource:
-      type: object
-      additionalProperties: true
   parameters:
-    WorkflowId:
-      name: workflowId
-      in: path
-      required: true
-      schema:
-        type: string
     WorkflowType:
       name: workflowType
       in: path
@@ -163,6 +153,16 @@ components:
       required: true
       schema:
         type: string
+    WorkflowId:
+      name: workflowId
+      in: path
+      required: true
+      schema:
+        type: string
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
   securitySchemes:
     basicAuth:
       type: http
