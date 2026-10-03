@@ -136,6 +136,18 @@ paths:
                 $ref: '#/components/schemas/Resource'
 components:
   parameters:
+    WorkflowId:
+      name: workflowId
+      in: path
+      required: true
+      schema:
+        type: string
+    CustomerId:
+      name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
     WorkflowType:
       name: workflowType
       in: path
@@ -147,18 +159,6 @@ components:
         - sourceworkflows
         - onboardworkflows
         - connecteventworkflows
-    CustomerId:
-      name: customerId
-      in: path
-      required: true
-      schema:
-        type: string
-    WorkflowId:
-      name: workflowId
-      in: path
-      required: true
-      schema:
-        type: string
   schemas:
     Resource:
       type: object
