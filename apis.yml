@@ -93,6 +93,9 @@ apis:
   - type: Documentation
     url: https://developer-community.icims.com/applications/applicant-tracking/workflows-api
 common:
+  - type: CapabilityMap
+    url: capabilities/icims-capability-edges.yml
+    name: iCIMS Business Capability Map
   - type: AgenticAccess
     url: agentic-access/icims-agentic-access.yml
   - type: TrustCenter

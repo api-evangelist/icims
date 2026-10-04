@@ -1,0 +1,27 @@
+slug: icims
+provider: iCIMS
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Workflows
+  spec_file: icims-workflows-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.9
+  evidence: '"connect a Job baseProfile and a Person associatedProfile and enable management of the candidate
+    workflow through the recruitment process. Supported workflow types include applicantworkflows, sourceworkflows,
+    onboardworkflows"; GET .../applicantworkflows/person/{personId}/job/{jobId}'
+  reason: Operations manage applicant, sourcing and onboarding workflows linking people to jobs, including
+    submittal status logs — the core recruiting/hiring and onboarding lifecycle, i.e. Talent Acquisition
+    Management.
