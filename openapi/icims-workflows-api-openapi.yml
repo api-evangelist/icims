@@ -136,14 +136,14 @@ paths:
                 $ref: '#/components/schemas/Resource'
 components:
   parameters:
-    WorkflowId:
-      name: workflowId
+    CustomerId:
+      name: customerId
       in: path
       required: true
       schema:
         type: string
-    CustomerId:
-      name: customerId
+    WorkflowId:
+      name: workflowId
       in: path
       required: true
       schema:
