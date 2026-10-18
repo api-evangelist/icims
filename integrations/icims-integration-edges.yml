@@ -1,7 +1,9 @@
 generated: '2026-10-14'
 method: searched
 checked:
+- microsoft-teams/integrations/microsoft-teams-integration-edges.yml
 - ukg/integrations/ukg-integration-edges.yml
+- zoom/integrations/zoom-integration-edges.yml
 source:
 - ukg/integrations/ukg-integration-edges.yml
 edges:
@@ -22,3 +24,39 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Recruiting & Candidate Screening
+- partner_name: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA200012603
+  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+  apps:
+  - ICIMS Hiring Agent
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Microsoft Teams app
+  publisher_verified:
+  - Microsoft 365 Publisher Attestation
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/IKotB-ENTryJRSUInlPNdw
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - iCIMS for Zoom
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
