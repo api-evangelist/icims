@@ -1,0 +1,9 @@
+openapi: 3.0.1
+info:
+  title: 'Coming Soon'
+  description: 'Updated API Specs will be available here. Please refer to the above documention for API examples.'
+  contact:
+    email: developerhelp@icims.com
+  version: 1.0.1
+components:
+  securitySchemes: {  }

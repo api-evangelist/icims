@@ -1,0 +1,12 @@
+{
+ "url": "https://developer-community.icims.com/sites/default/files/oas_files_processed/node-246.yaml",
+ "final": "https://developer-community.icims.com/sites/default/files/oas_files_processed/node-246.yaml",
+ "status": 200,
+ "content_type": "",
+ "bytes": 258,
+ "sha256": "bfe831aba6cce47f7f518df788b01b6e1ea842b67b96b8595cbe6ec797545fe3",
+ "fetched_at": "2026-10-19",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "re-archived: the provider's current document replaced a stale archive (roadmap#793); the old files are in openapi/_superseded/2026-10-19-stale"
+}
