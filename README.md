@@ -1,4 +1,4 @@
-# iCIMS (icims)
+# iCIMS
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,92 +66,120 @@
 
 iCIMS is a leading talent cloud company providing applicant tracking and talent acquisition software. The iCIMS developer platform provides APIs for integrating with iCIMS Talent Cloud, enabling access to job postings, applicant workflows, candidate management, and hiring processes.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/apis.yml)
+**Areas:** Applicant Tracking · Human Resources · Recruiting · Talent Acquisition
 
-## Scope
+## iCIMS on APIs.io
 
-- **Type:** Index
+Everything profiled for iCIMS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/icims/](https://apis.io/providers/icims/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- Applicant Tracking
-- HR
-- Recruiting
-- Talent Acquisition
+- [iCIMS Apply Framework API](https://apis.io/apis/icims/icims-apply-framework-api/) — The iCIMS Apply Framework API enables external systems to deliver candidate apply experiences and submit applications into the iCIMS Talent Cloud,…
+- [iCIMS Marketplace Integrations API](https://apis.io/apis/icims/icims-marketplace-api/) — The iCIMS Marketplace Integrations API enables certified partners to build, publish, and manage integrations with the iCIMS Talent Cloud across recruiting,…
+- [iCIMS Workflows API](https://apis.io/apis/icims/icims-workflows-api/) — Manage candidate workflows linking jobs and people.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-08
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### iCIMS Workflows API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The iCIMS Workflows API allows vendors to interact with various workflows, which connect a Job baseProfile and a Person associatedProfile, enabling management of the candidate workflow through the recruitment process.
+- [Icims Agentic Access](https://apis.io/agentic-access/icims/icims-agentic-access/)
 
-- **Human URL:** [https://developer-community.icims.com/applications/applicant-tracking/workflows-api](https://developer-community.icims.com/applications/applicant-tracking/workflows-api)
+#### Collections (2)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Applicant Tracking
-- Jobs
-- Workflows
+- [iCIMS Workflows API](https://apis.io/collections/icims/open-icims/)
+- [iCIMS Workflows API](https://apis.io/collections/icims/open-icims-workflows-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://developer-community.icims.com/applications/applicant-tracking/workflows-api)
-- [OpenAPI](openapi/icims-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/icims.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/icims.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### iCIMS Apply Framework API
+- [Icims Authentication](https://apis.io/security/icims/icims-authentication/)
+- [Icims Domain Security](https://apis.io/security/icims/icims-domain-security/)
+- [Icims Trust Center](https://apis.io/security/icims/icims-trust-center/)
 
-The iCIMS Apply Framework API enables external systems to deliver candidate apply experiences and submit applications into the iCIMS Talent Cloud, supporting integrations with job boards, sourcing channels, and partner platforms.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://developer-community.icims.com/](https://developer-community.icims.com/)
+Published plans, tiers and prices.
 
-#### Tags
+- [Icims Plans Pricing](https://apis.io/plans/icims/icims-plans-pricing/)
 
-- Applicant Tracking
-- Apply
-- Jobs
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://developer-community.icims.com/)
-- [Postman Collection](collections/icims.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/icims.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Icims Rate Limits](https://apis.io/rate-limits/icims/icims-rate-limits/)
 
-### iCIMS Marketplace Integrations API
+#### FinOps (1)
 
-The iCIMS Marketplace Integrations API enables certified partners to build, publish, and manage integrations with the iCIMS Talent Cloud across recruiting, onboarding, assessment, and background screening categories.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://developer-community.icims.com/](https://developer-community.icims.com/)
+- [Icims Finops](https://apis.io/finops/icims/icims-finops/)
 
-#### Tags
+## Where to find this API
 
-- Applicant Tracking
-- Integrations
-- Marketplace
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://developer-community.icims.com/)
-- [Postman Collection](collections/icims.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/icims.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/iCIMS-inc)
-- [LinkedIn](https://www.linkedin.com/company/icims)
-- [Portal](https://developer-community.icims.com/)
 - [Website](https://www.icims.com/)
 - [Documentation](https://developer-community.icims.com/)
 - [Support](https://www.icims.com/support/)
-- [Integrations](https://www.icims.com/products/integrations/)
+- [Blog](https://www.icims.com/feed)
+- [GitHub](https://github.com/iCIMS-inc)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 26.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 53.6 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 15.8 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/icims/](https://apis.io/providers/icims/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for iCIMS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/icims/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
